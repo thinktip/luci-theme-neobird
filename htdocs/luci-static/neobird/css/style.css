@@ -1,10 +1,10 @@
 /**
- *  Notgear is a clean HTML5 theme for LuCI. It is based on luci-theme-material
+ *  Neobird is a clean HTML5 theme for LuCI. It is based on luci-theme-material
  *
  *  luci-theme-material
  *      Copyright 2015 Lutty Yang <lutty@wcan.in>
  * 
- *  luci-theme-notgear
+ *  luci-theme-Neobird
  *      Copyright 2021 2smile <thinktip@gmail.com>
  *
  *  Licensed to the public under the Apache License 2.0
@@ -120,7 +120,7 @@ code {
     color: #0099CC;
 }
 
-img[src*="/luci-static/notgear/images/logo.png"]
+img[src*="/images/logo.png"]
     {    
     height: 75px;
 }
@@ -1663,7 +1663,7 @@ header > .container > .pull-right > * {
 }
 
 .node-main-login > .main .container {
-    background: top center no-repeat url(/luci-static/notgear/images/logo.png);
+    background: top center no-repeat url(../images/logo.png);
     background-size: 300px auto;
     width: 300px;
     display: inline-block;
@@ -2025,7 +2025,7 @@ body.lang_pl.node-main-login .cbi-value-title {
         height: 45px;
     }
 
-    img[src*="/luci-static/notgear/images/logo.png"]
+    img[src*="/images/logo.png"]
     {    
     height: 45px;
     }
