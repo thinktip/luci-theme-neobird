@@ -13,6 +13,8 @@
 :root {
     --bg: #f1f4f5;
     --bgwhite: #fff;
+    --activeColor: #51c291;
+    --activeBottom: none;
     --textColor: rgb(132,119,116);
     --borderColor: rgba(0,0,0,.15);
     --navbgColor: rgba(255, 255, 255, .7);
@@ -23,7 +25,10 @@
     --sectionBorder: 1px solid #e4eaec;
     --sectiontabBorder: 1px solid #e4eaec;
     --tabmenuBorderLR: 1px solid #e4eaec;
+    --tabmenuBottom: none;
+    --tabmenuRadius: none;
     --sectionnodeBorder: #f7f7f7 1px solid;
+    --cbilineColor: #f7f7f7 1px solid;
     --tabbgColor: #fff;
     --tabmenubgColor: #f7f7f7;
     --inputbgColor: #fff;
@@ -33,9 +38,9 @@
     --bttextColor: #fff;
     --badgebgColor: #f7f7f7;
     --badgeBorder: #e4eaec 1px solid;
-    --progressbarColor: #f0fff8;
+    --progressbarColor: #c8c8c8;
     --progressbar: #51c291;
-    --progressbartxtColor: #666;
+    --progressbartxtColor: #fff;
     --logo: url('/luci-static/neobird/images/logo.png');
     --mlogo: url('/luci-static/neobird/images/mlogo.png');
 }
@@ -45,6 +50,8 @@
     --bg: #000;
     --bgwhite: #000;
     --textColor: #fefefe;
+    --activeColor: #51c291;
+    --activeBottom: #51c291 2px solid;
     --borderColor: #2C2C3A;
     --navbgColor: hsla(0, 0%, 7%, .8);
     --navBorder: 1px solid #1c1c1e;
@@ -52,19 +59,22 @@
     --sectionbgColor2: #1c1c1e;
     --sectionShaddow: 3px 3px 3px rgba(0,0,0,.05);
     --sectionBorder: none;
-    --sectiontabBorder: 1px solid #1c1c1e;
+    --sectiontabBorder: none;
     --sectionnodeBorder: #3d3d41 1px solid;
+    --cbilineColor: #2d2d2d 1px solid;
     --tabbgColor: #1c1c1e;
     --tabmenuBorderLR: none;
-    --tabmenubgColor: #303030;
+    --tabmenubgColor: none;
+    --tabmenuBottom: #2d2d2d 1px solid;
+    --tabmenuRadius: 6px 6px 0 0;
     --inputbgColor: #0e0e0e;
     --inputtextColor: #a5a3a3;
-    --inputBorder: 1px solid #f7f7f7;
+    --inputBorder: 1px solid #2d2d2d;
     --mainleftbgColor: #000;
     --bttextColor: #fefefe;
-    --badgebgColor: #282828;
+    --badgebgColor: #fefefe;
     --badgeBorder: #3d3d40 1px solid;
-    --progressbarColor: #7a7a7a;
+    --progressbarColor: #fefefe;
     --progressbar: #333;
     --progressbartxtColor: #fefefe;
     --logo: url('/luci-static/neobird/images/logod.png');
@@ -83,17 +93,16 @@
     font-style: normal;
 }
 
-
 @font-face {
-    font-family: "neobird";
-    src:url("../fonts/neobird.eot");
-    src:url("../fonts/neobird.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/neobird.woff") format("woff"),
-        url("../fonts/neobird.ttf") format("truetype"),
-        url("../fonts/neobird.svg#neobird") format("svg");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'neobird';
+  src: url('');
+  src: url('?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff2') format('woff2'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('#iconfont') format('svg');
 }
+
 
 html {
     -webkit-text-size-adjust: 100%;
@@ -151,7 +160,7 @@ input {
     padding: 5px;
     font-size: 0.9rem;
     font-family: -apple-system, 'Microsoft Yahei', sans-serif, Helvetica, Arial, sans-serif;
-    border: var(--sectionBorder);
+    border: var(--inputBorder);
     background-color: var(--inputbgColor);
     transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
     -webkit-transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
@@ -300,6 +309,7 @@ label.zonebadge{
     background-color: #5bdeae !important;
     display: inline-block;
     cursor: pointer;
+    color: #fefefe;
 }
 .zonebadge {
     background-color: var(--tabmenubgColor) !important;
@@ -419,7 +429,6 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
 .myIcon{
     font-family: "neobird" !important;
     font-style: normal !important;
-    font-weight: normal !important;
     font-variant: normal !important;
     text-transform: none !important;
 }
@@ -517,9 +526,6 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     }
 }
 
-    .node-system-packages > .main .cbi-value.cbi-value-last > div {
-        width: 60% !important;
-    }
 
 .main-left {
     float: left;
@@ -667,7 +673,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > li a {
-    color: #51c291;
+    color: var(--activeColor);
     display: block;
     background-color: var(--sectionbgColor);
     border-radius: 6px;
@@ -693,88 +699,57 @@ p#shadowsocksr_status {
     padding: 0;
     padding-top:8px;
 }
-.main > .main-left > .nav > .slide > a[data-title="Status"]:before {
-    content: "\e026";
-    display: inline-block;
-    top: -1px;
-    left:-10px;
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    font-family: "neobird" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-}
+
 .main > .main-left > .nav > .slide > a:before {
     display: inline-block;
-    top: -1px;
     left:-10px;
     position: relative;
-    vertical-align: middle;
-    display: inline-block;
     font-family: "neobird" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
+    font-weight: bold !important;
     text-transform: none !important;
     speak: none;
-    line-height: 1;
+    font-size: 17px !important;
     -webkit-font-smoothing: antialiased;
 }
 
 
 .main > .main-left > .nav > .slide > a[data-title="Status"]:before {
-    content: "\e026";
+    content: "\e6b8";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="System"]:before {
-    content: "\e01c";
+    content: "\e68a";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
-    content: "\e029";
+    content: "\e6cb";
+}
+
+.main > .main-left > .nav > .slide > a[data-title="Docker"]:before {
+    content: "\e676";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
-    content: "\e00b";
+    content: "\e739";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
-    content: "\e015";
+    content: "\e6fa";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
-    content: "\e00e";
+    content: "\e6f2";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:before {
-    content: "\e00f";
+    content: "\e722";
 }
 
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding: 10px 0px 10px 25px
 }
 .main > .main-left > .nav > li > a[data-title="Logout"]:before {
-    content: "\e005";
-    display: inline-block;
-    top: -1px;
-    left:-10px;
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    font-family: "neobird" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
+    content: "\e78c";
 }
 
 .main > .main-left > .nav > li > a[data-title="Reboot"] {
@@ -782,20 +757,6 @@ p#shadowsocksr_status {
 }
 .main > .main-left > .nav > li > a[data-title="Reboot"]:before {
     content: "\e004";
-    display: inline-block;
-    top: -1px;
-    left:-10px;
-    position: relative;
-    vertical-align: middle;
-    display: inline-block;
-    font-family: "neobird" !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    font-variant: normal !important;
-    text-transform: none !important;
-    speak: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
 }
 
 .main > .main-left > .nav > .slide > ul {
@@ -812,11 +773,11 @@ p#shadowsocksr_status {
 
 .main > .main-left > .nav > li:hover,
 .main > .main-left > .nav > .slide > .menu:hover {
-    background: #51c291;
+    background: var(--activeColor);
     color:white;
 }
 .main > .main-left > .nav > .slide > .menu2:hover {
-    background: #51c291;
+    background: var(--activeColor);
     color:white;
 }
 
@@ -835,7 +796,7 @@ p#shadowsocksr_status {
 
 
 .main > .main-left > .nav > .slide > .slide-menu > .active {
-    background-color: #51c291;
+    background-color: var(--activeColor);
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > li > a {
@@ -852,9 +813,8 @@ p#shadowsocksr_status {
 .main > .main-left > .nav > .slide > .slide-menu > li > a:after{
     font-family: "neobird" !important;
     font-style: normal !important;
-    font-weight: normal !important;
     font-variant: normal !important;
-    content: "\e001";
+    content: "\eb03";
     float: right;
     padding-right: 5px;
 }
@@ -868,12 +828,12 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > li:hover {
-    background: #51c291;
+    background: var(--activeColor);
     color:white !important;
 }
 
 .main > .main-left > .nav > .slide > .slide-menu > .active:hover {
-    background-color: #51c291;
+    background-color: var(--activeColor);
     cursor: pointer;
 }
 
@@ -890,14 +850,14 @@ li {
 }
 
 h1 {
-    color:#51c291;
+    color: var(--activeColor);
     font-size: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
 }
 
 h2 {
-    color: #51c291;
+    color: var(--activeColor);
     font-size: 16px;
     padding: 0 12px 5px 12px;
     text-transform: capitalize;
@@ -988,6 +948,14 @@ table > tbody > tr > td, table > tbody > tr > th, table > tfoot > tr > td, table
     vertical-align: middle !important;
 }
 
+table > tbody > tr {
+    border-bottom: var(--cbilineColor) !important;
+}
+
+table > tbody > tr:last-child {
+    border-bottom: none !important;
+}
+
 .cbi-section-table-cell {
     text-align: center;
 }
@@ -1016,7 +984,7 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 #memcache > div,
 #memtotal > div {
     width: 100% !important;
-    border-color: var(--progressbar) !important;
+    border-color: var(--progressbarColor) !important;
     background-color:var(--progressbarColor) !important;
 }
 
@@ -1067,6 +1035,25 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 .node-system-admin em {
     padding: 0 !important;
 }
+
+/* fix node-nlbw-display */
+.node-nlbw-display hr {
+    display: none;
+}
+
+.node-nlbw-display p {
+    line-height: 1.5;
+    padding: 0 10px 5px 10px;
+}
+
+/* fix node-status-routes */
+
+.node-status-routes .cbi-section-node{
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 /* fix multiple table */
 
 table table {
@@ -1208,7 +1195,7 @@ form.inline + form.inline,
 .cbi-button-apply,
 .cbi-button-edit {
     color: #fff !important;
-    background-color: #51c291;
+    background-color: var(--activeColor);
 }
 
 .cbi-input-reset,
@@ -1239,6 +1226,9 @@ form.inline + form.inline,
     display: table-cell;
 }
 
+.cbi-tabmenu > li {
+    border-radius: var(--tabmenuRadius);
+}
 
 .tabs > li > a {
     text-decoration: none;
@@ -1250,7 +1240,7 @@ form.inline + form.inline,
 
 .cbi-tabmenu > li > a {
     text-decoration: none;
-    padding: 12px 10px;
+    padding: 10px;
     float: left;
     display: block;
     white-space: nowrap;
@@ -1263,9 +1253,9 @@ form.inline + form.inline,
 }
 
 .tabs > li[class~="active"] > a {
-    color: #51c291 !important;
+    color: var(--activeColor) !important;
     padding-bottom: 8px;
-    border-bottom: #51c291 2px solid;
+    border-bottom: var(--activeColor) 2px solid;
 }
 
 .tabs > li:hover {
@@ -1276,6 +1266,7 @@ form.inline + form.inline,
     border-top: var(--sectiontabBorder);
     border-left: var(--tabmenuBorderLR);
     border-right: var(--tabmenuBorderLR);
+    border-bottom: var(--tabmenuBottom);
     background-color: var(--tabmenubgColor);
     width: 100%;
     overflow-x: auto;
@@ -1287,8 +1278,12 @@ form.inline + form.inline,
 
 .cbi-tabmenu > li[class~="cbi-tab"] {
     background-color: var(--sectionbgColor);
+    border-bottom: var(--activeBottom);
 }
 
+.cbi-tabmenu > li[class~="cbi-tab"] a {
+    color: var(--activeColor) ;
+}
 
 .cbi-section-node-tabbed {
     padding: 0;
@@ -1353,6 +1348,11 @@ div > .cbi-value:nth-of-type(2n) {
     min-height: 40px;
     /* padding: 8px 10px; */
     flex-flow:row wrap;
+    border-bottom: var(--cbilineColor);
+}
+
+.cbi-value:last-child {
+    border-bottom: none;
 }
 
 .cbi-value strong {
@@ -1405,7 +1405,7 @@ div > .cbi-value:nth-of-type(2n) {
 }
 
 #cbi-vsftpd .cbi-map-descr {
-    color: #51c291;
+    color: var(--activeColor);
     padding: 0 12px 0px 12px;
     font-size: 1rem;
     font-weight: bold;
@@ -1462,6 +1462,7 @@ div > .cbi-value:nth-of-type(2n) {
     align-items: center;
     border-radius: 5px;
     border: var(--badgeBorder);
+    color: rgb(132,119,116);
 }
 
 #content_syslog {
@@ -1483,9 +1484,7 @@ img.cbi-image-button {
 }
 
 fieldset.cbi-section{
-    border-bottom: var(--sectionBorder);
-    border-left: var(--sectionBorder);
-    border-right: var(--sectionBorder);
+    border: var(--sectionBorder);
     margin-bottom: 20px;
     border-radius: 10px;
 }
@@ -1642,7 +1641,6 @@ width:50px !important;
 .zonebadge > .ifacebadge {
     padding: 3px 5px;
     margin: 5px;
-    border: 1px solid #6C6C6C;
 }
 
 .zonebadge > input[type="text"] {
@@ -1734,7 +1732,7 @@ header > .container > .pull-right > * {
 }
 
 .notice {
-    background-color: #51c291;
+    background-color: var(--activeColor);
     color: #fff;
     font-size: 0.8rem;
 }
@@ -1744,7 +1742,6 @@ header > .container > .pull-right > * {
     color:#76838f;
     content: "\e029";
     font-family: "neobird" !important;
-    font-weight: normal !important;
     font-size:14px;
     top: 18px;
     left:10px;
@@ -1815,7 +1812,9 @@ header > .container > .pull-right > * {
     padding: 10px 0 10px 5px !important;
 }
 
-
+.node-main-login > .main .cbi-value {
+    border: none;
+}
 
 .node-main-login > .main .cbi-value-title {
     width: 7rem;
@@ -1921,8 +1920,25 @@ header > .container > .pull-right > * {
     width: auto !important;
 }
 
-.node-system-packages .cbi-section-node .cbi-value {
-    clear: both;
+.node-system-packages .cbi-section-node .cbi-value-last {
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+.node-system-packages .cbi-section-node .cbi-value-last > div  {
+    border: none !important;
+}
+
+.node-system-packages .cbi-section-node .cbi-value:nth-child(1) {
+    padding: 5px 12px;
+}
+
+.node-system-packages .cbi-section-node .cbi-value-last > div > div  {
+    border: none !important;
+}
+
+.node-system-packages .cbi-section-node .cbi-value-last:nth-last-child(1)  {
+    padding: auto;
 }
 
 .node-system-packages > .main table tr td:nth-last-child(1) {
@@ -2033,9 +2049,6 @@ header > .container > .pull-right > * {
 
 }
 
-.node-system-packages .cbi-section-node .cbi-value {
-
-}
 
 .node-system-flashops fieldset fieldset {
     border: none;
