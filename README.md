@@ -1,4 +1,5 @@
 # luci-theme-neobird
+## 针对移动端优化的Openwrt主题
 
 六年前用OP，随手把luci-theme-material改成了自己喜欢的Advancedtomato样式
 因为用了很短时间便没再用OP了，主题也没再管。
