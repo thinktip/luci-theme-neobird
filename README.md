@@ -22,6 +22,12 @@
 * 想要实现完全的沉浸式（无浏览器导航、无地址栏等）体验，需要使用SSL证书，请自行申请域名、证书、安装并启用。
 * 如果不使用SSL证书，基于安全原因，iOS/iPadOS 在打开新的页面后，将会显示浏览器顶部菜单栏。
 
+## 关于其它
+* 你可以改来自己用，也可以继续优化共享，但如果想改进后共享给他人，请再三确认自己的审美能力，以确保不是丑化我的成果
+* 因为用了arlo的logo，请勿用于商业用途
+* 我可能会在某个时间改掉logo
+* luci插件众多，不规范的插件可能会存在显示问题，不做保证
+
 ## 预览
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5916.JPEG)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5915.JPEG)
