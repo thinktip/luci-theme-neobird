@@ -32,7 +32,7 @@
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5916.JPEG)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5915.JPEG)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5909.JPEG)
-
+![iPadOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_0103.JPEG)
 ## 自行编译：
 
 ```
