@@ -74,7 +74,7 @@
     --bttextColor: #fefefe;
     --badgebgColor: #fefefe;
     --badgeBorder: #3d3d40 1px solid;
-    --progressbarColor: #fefefe;
+    --progressbarColor: #6d6d6d;
     --progressbar: #333;
     --progressbartxtColor: #fefefe;
     --logo: url('/luci-static/neobird/images/logod.png');
@@ -718,7 +718,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="System"]:before {
-    content: "\e68a";
+    content: "\e645";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Services"]:before {
@@ -730,7 +730,7 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="NAS"]:before {
-    content: "\e739";
+    content: "\eb04";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="VPN"]:before {
@@ -738,18 +738,18 @@ p#shadowsocksr_status {
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Network"]:before {
-    content: "\e6f2";
+    content: "\e8f8";
 }
 
 .main > .main-left > .nav > .slide > a[data-title="Bandwidth Monitor"]:before {
-    content: "\e722";
+    content: "\e764";
 }
 
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding: 10px 0px 10px 25px
 }
 .main > .main-left > .nav > li > a[data-title="Logout"]:before {
-    content: "\e78c";
+    content: "\e641";
 }
 
 .main > .main-left > .nav > li > a[data-title="Reboot"] {
@@ -900,7 +900,7 @@ fieldset > legend {
 
 fieldset > fieldset {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     border: none;
     box-shadow: none;
 }
