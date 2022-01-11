@@ -33,6 +33,9 @@
 * luci插件众多，不规范的插件可能会存在显示问题，不做保证
 
 ## 预览
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S1.png)
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S2.png)
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S3.png)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5916.JPEG)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5915.JPEG)
 ![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5909.JPEG)
