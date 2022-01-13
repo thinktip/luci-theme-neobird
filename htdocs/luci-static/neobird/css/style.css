@@ -324,6 +324,12 @@ label.zonebadge{
 svg {
     background-color: var(--sectionbgColor);
 }
+
+/* fix .cbi-section .cbi-section */
+
+.cbi-section .cbi-section {
+    margin: 10px;
+}
 /** img retina **/
 
 img[src*="/luci-static/resources/icons/port_up.png"] {
@@ -703,12 +709,13 @@ p#shadowsocksr_status {
 .main > .main-left > .nav > .slide > a:before {
     display: inline-block;
     left:-10px;
+	top: 1px;
     position: relative;
     font-family: "neobird" !important;
     font-weight: bold !important;
     text-transform: none !important;
     speak: none;
-    font-size: 17px !important;
+    font-size: 16px !important;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -1027,6 +1034,9 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     color: var(--progressbartxtColor) !important;
 }
 
+.cbi-value-field {
+    width: 60%;
+}
 /* fix node-system-admin */
 .node-system-admin .cbi-value-field li div {
     padding: 0 !important;
@@ -1045,6 +1055,24 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
     line-height: 1.5;
     padding: 0 10px 5px 10px;
 }
+
+
+/* fix node-network-network */
+
+#cbi-network-lan-__status table {
+    width: auto;
+}
+
+#cbi-network-lan-__status table td {
+    width: 0;
+    padding: 0;
+
+}
+#cbi-network-lan-__status table td small {
+    font-size: 11px;
+    white-space: nowrap;
+}
+
 
 /* fix node-status-routes */
 
@@ -1078,12 +1106,8 @@ div#container\.nlbw\.traffic {
     overflow: auto;
 }
 
-div#cbi-network-lan-__status {
-    width: 40%;
-}
-
 td#__status-ifc-signal {
-    min-width: 60px !important;
+    width: 60px !important;
 }
 
 td#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge.png"] {
@@ -1356,7 +1380,6 @@ div > .cbi-value:nth-of-type(2n) {
 }
 
 .cbi-value strong {
-    font-size: 0.8rem;
     font-weight: normal;
 }
 
@@ -1515,9 +1538,7 @@ form>fieldset.cbi-section{
 #syslog {
     width: 100%;
     min-height: 15rem;
-    padding: 1rem;
-    font-size: small;
-    color: #5F5F5F;
+    padding: 10px;
     margin-bottom: 20px;
     border-radius: 0;
     background-color: var(--sectionbgColor);
@@ -1610,7 +1631,6 @@ width:50px !important;
 #iwsvg2,
 #bwsvg {
     border: var(--sectionBorder) !important;
-    border-top: none !important;
     font-family: -apple-system;
     background: none !important;
 }
@@ -1921,8 +1941,7 @@ header > .container > .pull-right > * {
 }
 
 .node-system-packages .cbi-section-node .cbi-value-last {
-    padding: 8px 12px;
-    display: inline-block;
+    /* padding: 8px 12px; */
 }
 
 .node-system-packages .cbi-section-node .cbi-value-last > div  {
@@ -1961,6 +1980,9 @@ header > .container > .pull-right > * {
     border-radius: 10px;
 }
 
+.node-system-packages .cbi-value-field {
+    width: 58%;
+}
 
 #container\.nlbw\.traffic, #container\.nlbw\.layer7, #container\.nlbw\.ipv6, #container\.nlbw\.export {
     margin-top: 0;
@@ -2134,13 +2156,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     }
     .cbi-value-field {
-        width: 70%;
-    }
 
-
-
-    .cbi-input-textarea {
-        font-size: small;
     }
 
     .node-status-iptables > .main fieldset li > a {
@@ -2324,7 +2340,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 /** fix node-system-system **/
     
     .node-system-system .cbi-value-title {
-        width: 50%;
+        width: 55%;
     }
     .node-system-system input[type='text'], .node-system-system input[type='password'] {
         width: 160px;
@@ -2333,7 +2349,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 /** fix node-system-admin **/
 
     .node-system-admin .cbi-value-title {
-        width: 50%;
+        width: 55%;
     }
     .node-system-admin input[type='text'], .node-system-admin input[type='password'] {
         width: 160px;
@@ -2351,7 +2367,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 /** fix node-services-upnp **/
 
     .node-services-upnp .cbi-value-title {
-        width: 79%;
+        width: 78%;
     }
     .node-services-upnp input[type='text'], .node-services-upnp input[type='password'] {
         width: 130px;
@@ -2360,13 +2376,18 @@ body.lang_pl.node-main-login .cbi-value-title {
 /** fix node-services-udpxy **/
 
     .node-services-udpxy .cbi-value-title {
-        width: 70%;
+        width: 40%;
     }
     .node-services-udpxy input[type='text'], .node-services-udpxy input[type='password'] {
         width: 140px;
     }
 
 /** fix node-network-network **/
+
+    #cbi-network-lan-__status .cbi-value-title {
+        width: 15%;
+    }
+
 
     .node-network-network .cbi-value-title {
         width: 60%;
@@ -2388,7 +2409,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 
 /* fix node-nas-vsftpd */
     .node-nas-vsftpd .cbi-value-title {
-        width: 63%;
+        width: 65%;
     }
     .node-nas-vsftpd input[type='text'], .node-nas-vsftpd input[type='password'], .node-nas-vsftpd select {
         width: 160px;
@@ -2421,7 +2442,6 @@ body.lang_pl.node-main-login .cbi-value-title {
     .cbi-value > .cbi-value-field {
         display: block;
         float: left;
-        width: 58%;
     }
 
     .cbi-page-actions > div > input {
