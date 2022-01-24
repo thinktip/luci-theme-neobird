@@ -502,13 +502,12 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
 }
 
 .navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 8px 13px;
-  margin: 0 15px;
-  text-decoration: none;
+    float: left;
+    text-align: center;
+    padding: 8px 0;
+    width: 20%;
+    text-decoration: none;
+    max-width: 100px;
 }
 
 #cbi-shadowsocksr .cbi-map-descr {
@@ -709,7 +708,7 @@ p#shadowsocksr_status {
 .main > .main-left > .nav > .slide > a:before {
     display: inline-block;
     left:-10px;
-	top: 1px;
+    top: 1px;
     position: relative;
     font-family: "neobird" !important;
     font-weight: bold !important;
@@ -1408,8 +1407,9 @@ div > .cbi-value:nth-of-type(2n) {
     width: auto;
 }
 .cbi-section-table tr .cbi-value-field .ifacebox {
-    width: 60px !important;
     margin: auto;
+    width: fit-content;
+    min-width: 60px;
 }
 
 /* desc */
