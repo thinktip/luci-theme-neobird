@@ -751,6 +751,18 @@ p#shadowsocksr_status {
     content: "\e764";
 }
 
+.main .main-left .nav li.slide .menu[data-title="Statistics"]:before {
+  content: "\e604";
+}
+
+.main .main-left .nav li.slide .menu[data-title="Control"]:before {
+  content: "\e67a";
+}
+
+.main .main-left .nav li.slide .menu[data-title="Asterisk"]:before {
+  content: "\e7dd";
+}
+
 .main > .main-left > .nav > li > a[data-title="Logout"] {
     padding: 10px 0px 10px 25px
 }
