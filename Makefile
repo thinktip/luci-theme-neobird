@@ -7,8 +7,8 @@ include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=Neobird Theme
 LUCI_DEPENDS:=
-PKG_VERSION:=1.98
-PKG_RELEASE:=202201271300
+PKG_VERSION:=1.99
+PKG_RELEASE:=202201272020
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
