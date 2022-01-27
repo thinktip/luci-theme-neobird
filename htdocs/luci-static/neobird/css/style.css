@@ -2345,6 +2345,10 @@ body.lang_pl.node-main-login .cbi-value-title {
         height: 45px;
     }
 
+    h3 {
+        padding: 0 10px 10px 10px;
+    }
+
     img[src*="/images/logo.png"]
     {    
     height: 45px;
