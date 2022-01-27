@@ -12,6 +12,7 @@
 
 :root {
     --bg: #f1f4f5;
+    --mainbg: #fff;
     --bgwhite: #fff;
     --activeColor: #51c291;
     --activeBottom: none;
@@ -20,7 +21,7 @@
     --navbgColor: rgba(255, 255, 255, .7);
     --navBorder: 1px solid #f2f2f2;
     --sectionbgColor: #fff;
-    --sectionbgColor2: #f9f9f9;
+    --sectionbgColor2: #fff;
     --sectionShaddow: 3px 3px 3px rgba(0,0,0,.05);
     --sectionBorder: 1px solid #e4eaec;
     --sectiontabBorder: 1px solid #e4eaec;
@@ -31,10 +32,10 @@
     --cbilineColor: #f7f7f7 1px solid;
     --tabbgColor: #fff;
     --tabmenubgColor: #f7f7f7;
-    --inputbgColor: #fff;
+    --inputbgColor: #f8f8f8;
     --inputtextColor: #76838f;
     --inputBorder: 1px solid #e4eaec;
-    --mainleftbgColor: rgb(229,229,229);
+    --mainleftbgColor: rgb(255,255,255);
     --bttextColor: #fff;
     --badgebgColor: #f7f7f7;
     --badgeBorder: #e4eaec 1px solid;
@@ -67,15 +68,15 @@
     --tabmenubgColor: none;
     --tabmenuBottom: #2d2d2d 1px solid;
     --tabmenuRadius: 6px 6px 0 0;
-    --inputbgColor: #0e0e0e;
-    --inputtextColor: #a5a3a3;
-    --inputBorder: 1px solid #2d2d2d;
+    --inputbgColor: #2f2f2f;
+    --inputtextColor: #fefefe;
+    --inputBorder: 1px solid #4d4d4d;
     --mainleftbgColor: #000;
     --bttextColor: #fefefe;
     --badgebgColor: #fefefe;
     --badgeBorder: #3d3d40 1px solid;
     --progressbarColor: #6d6d6d;
-    --progressbar: #333;
+    --progressbar: #51c291;
     --progressbartxtColor: #fefefe;
     --logo: url('/luci-static/neobird/images/logod.png');
     --mlogo: url('/luci-static/neobird/images/mlogod.png');
@@ -114,7 +115,7 @@ html, body {
     padding: 0px;
     height: 100%;
     font-family: -apple-system, 'Microsoft Yahei' !important;
-    font-size:0.9rem;
+    font-size: 0.92rem;
     line-height: 150%;
     background-color: var(--bg);
     color:var(--textColor);
@@ -143,12 +144,12 @@ em {
 
 select {
     overflow: hidden !important;
-    width: 185px;
+    width: 100%;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding: 0 20px 0 5px !important;
-    background-size: 20px 14px;
+    padding: 0 25px 0 10px !important;
+    background-size: 24px 16px;
     background-repeat: no-repeat;
     background-position: right center;
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABGCAYAAAA6hjFpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjhDNzA0QUE0NjE2QTExRUNCMjJFQkQyRkIyNURDNjE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjhDNzA0QUEzNjE2QTExRUNCMjJFQkQyRkIyNURDNjE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMi41IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzNBNTYzNTY2MTUxMTFFQ0IyMkVCRDJGQjI1REM2MTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzNBNTYzNTc2MTUxMTFFQ0IyMkVCRDJGQjI1REM2MTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6YjzxlAAACsklEQVR42uyaXUsVURSG51T0U/obfUvhhYF0U0HQhZQVIWVJCAkiSUXfRRcaBFbXQVBBRCASFCJBpQQipw+RREkpCa9aG95gs0DMOp6Z7TwvvAxnzczaa6/nzDnzVTndfSVDxdE6WgAQBBCAIIAABAEEIAggAEEAQQABCAIIQBBAAIIAAhAEEAQQgCCAAAStGSAbzA/N+wvSiwPmB6or16bkoY2afLN5r+q4l2MfDpr7zetV2z7zYpmOkAHByNSE0IxDOdUSxr2rOjLVNVC2n6z77hsYmtFnbqlzHS0aN+7DouorFZBH+ibGUCrmO+YjdaqhVeNVHIxm1Ve6P/XH5ibzLwfllvn4Ko8d8t90MEIde1RXaU97n6oJCw7KNXPbKo3ZpvwxjAXV8YTrkCx7piPFQ7lsbq/xWO3K62E0qQ4uDKXn5kbzTxe/YO6o0Rgdypc5GI0anyt1p5fm3eYfLn7e3PmfuTuVJ1YYZ5fG5Up9CQ2qSfMu3m3u+secXdo/1rzGGeTWyfIaUrPmXPycuWeFuXq0X6w55R8q4NwLe3PxlXmn+buLnzX3/mWOXm0fK+RrUP4MICvTG/MO86yLnzFfWmbfi9ou1qzyvS7wnAt/+31YTZxx8ZPmq+709c/pcoifcvEZ5Rku+HyTeB4yYt5unnbxE+YbEZSwvK54rGntP5LAXJN5QPXWvNX8zcWPmm9rHmF5zK0P22/T/hlAaqv35i3mKRc/bB7VMtaUIL5LaI7JPcIdVZMnXXyT+zyp7T4kNr8kn6mPqdlfllj/VevHEpxbsi85fNTP1ycX/2zerPUZQOqrcUGp6nNVMMYTnlPyrwFNCMILLScSn0++r7zUSFVdZ6wJ8aIcQBBAAIIAAhAEEIAggAAEAQQBBCAIIABBAAEIAghAEEAQQJLQbwEGAK/reX2gh5gQAAAAAElFTkSuQmCC');
@@ -157,8 +158,8 @@ select {
 select,
 input {
     color: var(--inputtextColor);
-    padding: 5px;
-    font-size: 0.9rem;
+    padding: 5px 10px;
+    font-size: 0.92rem;
     font-family: -apple-system, 'Microsoft Yahei', sans-serif, Helvetica, Arial, sans-serif;
     border: var(--inputBorder);
     background-color: var(--inputbgColor);
@@ -166,10 +167,11 @@ input {
     -webkit-transition: color 150ms ease, border-color 150ms ease, opacity 150ms ease;
     outline-style: none;
     vertical-align: middle;
-    border-radius: 3px;
-    margin: 3px;
-    height: 2.2rem;
-    line-height: 2.2rem;
+    border-radius: 8px;
+    margin: 3px 3px 3px 0;
+    height: 2.8rem;
+    line-height: 2.8rem;
+    max-width: 550px;
     }
 }
 
@@ -189,11 +191,13 @@ input[type='file'] {
 }
 
 input[type='checkbox'] {
-    height: auto;
+    height: 1.2rem;
+    width: 1.2rem;
+    
 }
-
 input[type='radio'] {
-    height: auto;
+    height: 1.2rem;
+    width: 1.2rem;
 }
 
 select[multiple="multiple"] {
@@ -201,7 +205,7 @@ select[multiple="multiple"] {
 }
 
 input[type='text'],input[type='password'] {
-    width: 185px;
+    width: 100%;
 }
 code {
     color: #0099CC;
@@ -209,12 +213,15 @@ code {
 
 img[src*="/images/logo.png"]
     {
-    height: 75px;
+    height: 60px;
     background-image: var(--logo);
-    background-size: 295px;
+    background-size: 220px;
     background-repeat: no-repeat;
-    padding: 0 0 0 295px;
+    padding: 0 0 0 250px;
     width: 0;
+    background-position-x: 10px;
+    background-position-y: 10px;
+    background-color: var(--mainleftbgColor);
 }
 
 abbr {
@@ -245,9 +252,9 @@ header, .main {
 
 header {
     background-color: var(--bgwhite);
-    height: 75px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     transition: box-shadow .2s;
+    height: 50px;
     float: left;
     position: fixed;
     z-index: 101;
@@ -291,7 +298,7 @@ text, line {
 }
 
 input.cbi-button.cbi-button-add {
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -323,6 +330,13 @@ label.zonebadge{
 
 svg {
     background-color: var(--sectionbgColor);
+}
+
+/* fix p#aliyundrive-webdav_status b */
+
+p#aliyundrive-webdav_status b {
+    color: #ff6666 !important;
+    text-transform:capitalize;
 }
 
 /* fix .cbi-section .cbi-section */
@@ -408,12 +422,15 @@ img[src*="/luci-static/resources/icons/bridge.png"] {
     border-radius: 4px 4px 0 0;
 }
 
+
 img[src*="/luci-static/resources/cbi/add.gif"] {
     background-image: url(../images/add.png);
     background-size: 20px 20px;
     height: 20px;
     padding: 0 0 0 20px;
     width: 0;
+    z-index: 2;
+
 }
 img[src*="/luci-static/resources/cbi/remove.gif"] {
     background-image: url(../images/remove.png);
@@ -421,6 +438,7 @@ img[src*="/luci-static/resources/cbi/remove.gif"] {
     height: 20px;
     padding: 0 0 0 20px;
     width: 0;
+    z-index: 2;
 }
 
 img[src*="/luci-static/resources/cbi/reload.gif"] {
@@ -429,6 +447,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     height: 20px;
     padding: 0 0 0 20px;
     width: 0;
+    z-index: 2;
 }
 
 
@@ -452,7 +471,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
 }
 
 .main {
-    top: 75px;
+    top: 50px;
     bottom: 0rem;
     position: relative;
     height: 100%;
@@ -510,6 +529,10 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     max-width: 100px;
 }
 
+.cbi-map {
+    margin-top: 10px;
+}
+
 #cbi-shadowsocksr .cbi-map-descr {
     display: none;
 }
@@ -539,7 +562,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     overflow-x: auto;
     height: 100%;
     position: fixed;
-    top: 75px;
+    padding-top: 15px;
 }
 
 .main-right {
@@ -547,15 +570,17 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     width: calc(100% - 17rem);
     float: right;
     height: 100%;
+    border-left: var(--sectionBorder);
 }
 
 .main-right > #maincontent {
 }
 
 .pull-right {
-    float: right;
-    margin-top:10px;
-    margin-right:10px;
+    position: absolute;
+    top: -2px;
+    right: 30px;
+    cursor: pointer;
 }
 
 .pull-left {
@@ -674,15 +699,15 @@ p#shadowsocksr_status {
     font-size: 1rem;
     width: 90%;
     margin: auto;
-    margin-top: 20px;
 }
 
 .main > .main-left > .nav > li a {
     color: var(--activeColor);
     display: block;
-    background-color: var(--sectionbgColor);
     border-radius: 6px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 /*
@@ -714,7 +739,7 @@ p#shadowsocksr_status {
     font-weight: bold !important;
     text-transform: none !important;
     speak: none;
-    font-size: 16px !important;
+    font-size: 1.2rem !important;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -806,7 +831,6 @@ p#shadowsocksr_status {
     overflow:hidden;
     }
 .main > .main-left > .nav > .slide > .slide-menu > li {
-    background-color: var(--sectionbgColor2);
     margin-top: 8px;
     border-radius: 6px;
 }
@@ -825,7 +849,7 @@ p#shadowsocksr_status {
     background:none !important;
     border: none !important;
     text-transform: capitalize;
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 8px 0px 8px 25px;
 }
 .main > .main-left > .nav > .slide > .slide-menu > li > a:after{
@@ -876,15 +900,15 @@ h1 {
 
 h2 {
     color: var(--activeColor);
-    font-size: 16px;
-    padding: 0 12px 5px 12px;
+    padding: 0 12px 0px 12px;
     text-transform: capitalize;
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: var(--activeColor);
     font-weight:bold;
-    margin: 0 12px 5px 12px;
+    padding: 0 12px 10px 15px;
 }
 
 h4 {
@@ -892,11 +916,11 @@ h4 {
 }
 
 label {
-    display: inline-block;  
-    vertical-align: middle;  
+    display: inline-block;
+    vertical-align: middle;
 }
 fieldset {
-    margin: 10px 0 0 0;
+   /* margin: 10px 0 0 0; */
     padding: 10px;
     border: 1px;
     font-weight: normal;
@@ -908,7 +932,7 @@ fieldset {
     overflow-x: auto;
     overflow-y: hidden;
     background-color: var(--sectionbgColor);
-    box-shadow: var(--sectionShaddow);
+    /* box-shadow: var(--sectionShaddow); */
     -webkit-overflow-scrolling: touch;
 }
 
@@ -917,10 +941,10 @@ fieldset > legend {
 }
 
 fieldset > fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-    box-shadow: none;
+    /* margin: 0; */
+    /* padding: 0; */
+    /* border: none; */
+    /* box-shadow: none; */
 }
 
 .panel-title {
@@ -1040,13 +1064,13 @@ fieldset > table > tbody > tr:nth-of-type(odd) {
 #conns div div small,
 #memcache div div small,
 #memtotal div div small{
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
     line-height: 130%;
     color: var(--progressbartxtColor) !important;
 }
 
 .cbi-value-field {
-    width: 60%;
+    width: 65%;
 }
 /* fix node-system-admin */
 .node-system-admin .cbi-value-field li div {
@@ -1140,7 +1164,6 @@ td#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge.png"] {
     transition: all 0.2s ease-in-out;
     display: inline-block;
     border: none;
-    border-radius: 0.3rem;
     cursor: pointer;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
@@ -1154,8 +1177,9 @@ td#__status-ifc-signal img[src*="/luci-static/resources/icons/bridge.png"] {
     width: auto !important;
     min-width: 80px;
     padding: 0px 8px 0px 8px;
-    height: 35px;
     max-width: 160px;
+    height: 35px;
+    line-height: 35px;
 }
 
 .cbi-button:hover,
@@ -1247,13 +1271,10 @@ form.inline + form.inline,
 /* table */
 
 .tabs {
-    background-color: var(--tabbgColor);
-    border-radius: 10px;
     margin: 15px 0;
     display: flex;
     align-items: center;
     overflow-x: auto;
-    padding: 0 10px;
 }
 
 .cbi-tabmenu > li,
@@ -1267,18 +1288,24 @@ form.inline + form.inline,
 
 .tabs > li > a {
     text-decoration: none;
-    padding: 10px 5px 10px 5px;
+    padding: 0 6px 0 6px;
     float: left;
     display: block;
     white-space: nowrap;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.92rem;
 }
 
 .cbi-tabmenu > li > a {
     text-decoration: none;
-    padding: 10px;
+    padding: 0 10px 0 10px;
     float: left;
     display: block;
     white-space: nowrap;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.92rem;
 }
 
 .tabs > li[class~="active"],
@@ -1321,7 +1348,6 @@ form.inline + form.inline,
 }
 
 .cbi-section-node-tabbed {
-    padding: 0;
     margin-top: 0;
     border-bottom: var(--sectiontabBorder);
     border-left: var(--sectiontabBorder);
@@ -1350,7 +1376,7 @@ div > .cbi-value:nth-of-type(2n) {
 }
 
 .cbi-value-field {
-    padding: 10px 10px 10px 0;
+    /* padding: 10px 10px 10px 0; */
 }
 
 .cbi-value-helpicon > img {
@@ -1370,8 +1396,8 @@ div > .cbi-value:nth-of-type(2n) {
     word-wrap: break-word;
     display: table-cell;
     width: 35%;
-    float: left;
-    padding: 13px 10px;
+    float: left; 
+    padding: 13px 10px 5px 3px;
 }
 
 .cbi-value {
@@ -1381,7 +1407,7 @@ div > .cbi-value:nth-of-type(2n) {
     align-content: center;
     justify-content: flex-start;
     min-height: 40px;
-    /* padding: 8px 10px; */
+    padding: 8px 10px;
     flex-flow:row wrap;
     border-bottom: var(--cbilineColor);
 }
@@ -1434,7 +1460,7 @@ div > .cbi-value:nth-of-type(2n) {
 }
 
 .cbi-map-descr h3 {
-    font-size: 0.8rem;
+    font-size: 0.92rem;
     font-weight: normal;
     color: #666;
 }
@@ -1442,7 +1468,7 @@ div > .cbi-value:nth-of-type(2n) {
 #cbi-vsftpd .cbi-map-descr {
     color: var(--activeColor);
     padding: 0 12px 0px 12px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -1467,7 +1493,7 @@ div > .cbi-value:nth-of-type(2n) {
 .right .cbi-button {
     height: 20px;
     line-height: 20px;
-    min-width: 50px;
+    min-width: 70px;
     padding: 0;
     margin: 0;
 }
@@ -1522,6 +1548,7 @@ fieldset.cbi-section{
     border: var(--sectionBorder);
     margin-bottom: 20px;
     border-radius: 10px;
+    margin-top: 5px;
 }
 
 form>fieldset.cbi-section{
@@ -1542,7 +1569,7 @@ form>fieldset.cbi-section{
     vertical-align: baseline;
     border-radius: 10px;
     font-family: Menlo, Mono;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     white-space: pre;
     margin-bottom: 5px;
 }
@@ -1650,7 +1677,7 @@ width:50px !important;
 .ifacebox {
     border: #1096db 1px solid;
     border-radius: 5px;
-    font-size:0.8rem;
+    font-size:0.92rem;
     font-weight:normal;
 }
 .ifacebox-head {
@@ -1691,10 +1718,10 @@ width:50px !important;
 }
 
 .cbi-section-create {
-    padding-left: 10px;
+    padding: 0 10px;
 }
 .cbi-section-create > .cbi-button-add {
-    margin: 0.5rem;
+    margin: 10px 0 10px 0
 }
 
 div.cbi-value var, td.cbi-value-field var {
@@ -1712,7 +1739,6 @@ small {
 .cbi-button-down {
     display: inline-block;
     min-width: 0;
-    padding: 0.2rem 0.3rem;
     font-size: 0.9rem;
 }
 
@@ -1742,15 +1768,23 @@ table.cbi-section-table select {
 }
 
 header > .container > .pull-right > * {
-    position: relative;
-    top: 0.45rem;
-    cursor: pointer;
+
 }
 
 #xhr_poll_status > .label.success {
-    background-color: rgb(0,171,232);
-    padding: 0px 2px 0px 2px;
-    display: none;
+    background-color: var(--activeColor);
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+#xhr_poll_status_off {
+    background-color: var(--progressbarColor);
+    color: var(--bgwhite);
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
 }
 
 .label {
@@ -1767,21 +1801,9 @@ header > .container > .pull-right > * {
     background-color: var(--activeColor);
     color: #fff;
     font-size: 0.8rem;
-}
-
-.showSide:before {
-    display:none;
-    color:#76838f;
-    content: "\e029";
-    font-family: "neobird" !important;
-    font-size:14px;
-    top: 18px;
-    left:10px;
-    position: relative;
-    vertical-align: middle;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 10;
 }
 
 .darkMask {
@@ -1795,8 +1817,10 @@ header > .container > .pull-right > * {
 }
 
 /* fix Main Login*/
+
 .node-main-login {
     text-align: center;
+    background-color: var(--bgwhite) !important;
 }
 .node-main-login .cbi-section-node > .cbi-value:nth-of-type(2n) {
     background: none;
@@ -1892,7 +1916,7 @@ header > .container > .pull-right > * {
 
 .node-services-shadowsocksr .cbi-input-textarea,
 .node-nlbw-config .cbi-input-textarea {
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 .node-services-shadowsocksr #cbi-logview .cbi-section {
@@ -1960,9 +1984,7 @@ header > .container > .pull-right > * {
     border: none !important;
 }
 
-.node-system-packages .cbi-section-node .cbi-value:nth-child(1) {
-    padding: 5px 12px;
-}
+
 
 .node-system-packages .cbi-section-node .cbi-value-last > div > div  {
     border: none !important;
@@ -2093,13 +2115,14 @@ header > .container > .pull-right > * {
 
 .node-system-flashops .cbi-section {
     margin-bottom: 0;
+    padding: 0;
 }
 .node-system-flashops .cbi-section-descr {
     padding: 12px;
     line-height: 1.5;
     border-radius: 6px;
-    border: var(--sectiontabBorder);
-    background-color: var(--sectionbgColor2);
+    /* border: var(--sectiontabBorder);
+    background-color: var(--sectionbgColor2); */
 }
 .node-system-flashops fieldset {
     border-radius: 0 0 10px 10px;
@@ -2151,32 +2174,6 @@ body.lang_pl.node-main-login .cbi-value-title {
     width: 12rem;
 }
 
-
-@media screen and (max-width: 1600px) {
-    .main-left {
-        /*width: calc(0% + 15rem);*/
-    }
-
-    header > .container > .pull-right > * {
-        top: 0.35rem;
-    }
-
-
-    .cbi-value-title {
-        width: 30%;
-        padding-right: 10px;
-
-    }
-    .cbi-value-field {
-
-    }
-
-    .node-status-iptables > .main fieldset li > a {
-        padding: 0.3rem 0.6rem;
-    }
-}
-
-
 @media screen and (max-width: 1280px) {
     header {
         /*height: 3.5rem;*/
@@ -2192,8 +2189,7 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     .main-left {
         width: calc(0% + 17rem);
-        top: 75px;
-        height: calc(100% - 3.5rem);
+        top: 50px;
     }
 
     .main-right {
@@ -2209,29 +2205,47 @@ body.lang_pl.node-main-login .cbi-value-title {
     .main > .main-left > .nav > li,
     .main > .main-left > .nav > li a,
     .main > .main-left > .nav > .slide > .menu {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     .main > .main-left > .nav > .slide > .slide-menu > li > a {
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-transform: capitalize;
+    }
+
+    img[src*="/luci-static/resources/cbi/add.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+    img[src*="/luci-static/resources/cbi/remove.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+
+    img[src*="/luci-static/resources/cbi/reload.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
     }
 }
 
 @media screen and (max-width: 992px) {
 
-    header {
-        height: 75px;
-    }
-
-    header > .container > .brand {
-        font-size: 18px;
-        height: 3.5rem;
-        line-height: 3.5rem;
-        width: calc(0% + 15rem);
-        /*width: initial;*/
-        padding-left: 5px;
-        padding-right: 20px;
+    img[src*="/images/logo.png"] {
+    background-color: var(--mainleftbgColor);
+    height: 50px;
+    background-image: var(--mlogo);
+    background-size: 310px;
+    background-repeat: no-repeat;
+    padding: 0 0 0 310px;
+    width: 0;
+    margin: 0;
+    background-position: 0;
     }
 
     .main-left {
@@ -2249,13 +2263,14 @@ body.lang_pl.node-main-login .cbi-value-title {
         padding: 0;
         display: inline-block;
         position: absolute;
-        width: 100%;
-        height: 75px;
+        width: 300px;
+        height: 50px;
     }
 
     .showSide:before {
         content: "\e20e";
         font-size: 1.7rem;
+        display: none;
     }
 
     .node-main-login .showSide {
@@ -2263,7 +2278,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     .cbi-value-title {
-
+        width:35%;
     }
 
     .node-network-diagnostics > .main .cbi-map fieldset > div * {
@@ -2289,14 +2304,37 @@ body.lang_pl.node-main-login .cbi-value-title {
     .node-main-login > .main .cbi-value-title {
         text-align: left;
     }
+
+    img[src*="/luci-static/resources/cbi/add.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+    img[src*="/luci-static/resources/cbi/remove.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+
+    img[src*="/luci-static/resources/cbi/reload.gif"] {
+        right: 70px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
 }
 
 @media screen and (max-width: 480px) {
 
     fieldset {
-    overflow-x: auto;
+    /* overflow-x: auto; */
     }
 
+    select {
+        width: 100%;
+    }
     .label {
         position: absolute;
         right: 5px;
@@ -2315,6 +2353,8 @@ body.lang_pl.node-main-login .cbi-value-title {
     background-repeat: no-repeat;
     padding: 0 0 0 310px;
     width: 0;
+    margin: 0;
+    background-position: 0;
     }
 
     .showSide {
@@ -2322,7 +2362,7 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 
     #maincontent > .container {
-        margin: 20px 10px;
+        margin: 20px 20px;
     }
 
     .main {
@@ -2333,133 +2373,71 @@ body.lang_pl.node-main-login .cbi-value-title {
         top: 45px;
     }
     .main > .main-left > .nav > .slide > .menu {
-        font-size: 1rem;
     }
 
     .main > .main-left > .nav > .slide > .slide-menu > li > a {
-        font-size: 0.9rem;
     }
 
     .cbi-value {
-    flex-flow: row nowrap !important;
+    margin-bottom: 20px;
+    display: table;
+    padding: 0px;
+    border-bottom: none;
     }
 
     .cbi-value-title {
-        width: 42%;
-        display: block;
+        width: 100%;
+        font-weight: 700;
         float: left;
+        padding: 0;
+        margin: 0;
+        margin-bottom: .25rem;
     }
-/** fix node-system-system **/
     
-    .node-system-system .cbi-value-title {
-        width: 55%;
-    }
-    .node-system-system input[type='text'], .node-system-system input[type='password'] {
-        width: 160px;
-    }
-
-/** fix node-system-admin **/
-
-    .node-system-admin .cbi-value-title {
-        width: 55%;
-    }
-    .node-system-admin input[type='text'], .node-system-admin input[type='password'] {
-        width: 160px;
-    }
-
-/** fix node-system-fstab **/
-
-    .node-system-fstab .cbi-value-title {
-        width: 60%;
-    }
-    .node-system-fstab input[type='text'], .node-system-fstab input[type='password'] {
-        width: 160px;
-    }
-
-/** fix node-services-upnp **/
-
-    .node-services-upnp .cbi-value-title {
-        width: 78%;
-    }
-    .node-services-upnp input[type='text'], .node-services-upnp input[type='password'] {
-        width: 130px;
-    }
-
-/** fix node-services-udpxy **/
-
-    .node-services-udpxy .cbi-value-title {
-        width: 40%;
-    }
-    .node-services-udpxy input[type='text'], .node-services-udpxy input[type='password'] {
-        width: 140px;
-    }
-
-/** fix node-network-network **/
-
-    #cbi-network-lan-__status .cbi-value-title {
-        width: 15%;
-    }
-
-
-    .node-network-network .cbi-value-title {
-        width: 60%;
-    }
-    .node-network-network input[type='text'], .node-network-network input[type='password'], .node-network-network select {
-        width: 140px;
-    }
-/** fix node-network-network **/
-
-    .node-network-dhcp .cbi-value-title {
-        width: 50%;
-    }
-    .node-network-dhcp input[type='text'], .node-network-dhcp input[type='password'], .node-network-dhcp select {
-        width: 160px;
-    }
-
-/* fix node-services-shadowsocksr */
-
-
-/* fix node-nas-vsftpd */
-    .node-nas-vsftpd .cbi-value-title {
-        width: 65%;
-    }
-    .node-nas-vsftpd input[type='text'], .node-nas-vsftpd input[type='password'], .node-nas-vsftpd select {
-        width: 160px;
-    }
-/* node-nlbw-config */
-
-    .node-nlbw-config .cbi-value-title {
-        width: 35%;
-    }
-    .node-nlbw-config input[type='text'], .node-nlbw-config input[type='password'], .node-nlbw-config select {
-        width: 190px;
-    }
-
-    .node-nlbw-config .cbi-tab-descr {
+    .cbi-section-node {
         padding: 10px;
     }
 
-    .node-nlbw-config textarea {
-        margin: 10px;
-    }
-
-/** fix node-status-iptables **/
-    
-
     .cbi-value-description {
         width: 100%;
-        display: none;
+        display: block;
     }
 
     .cbi-value > .cbi-value-field {
         display: block;
         float: left;
+        width: 100%;
+    }
+    img[src*="/luci-static/resources/cbi/add.gif"] {
+        right: 45px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+    img[src*="/luci-static/resources/cbi/remove.gif"] {
+        right: 45px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
     }
 
-    .cbi-page-actions > div > input {
-        display: none;
+    img[src*="/luci-static/resources/cbi/reload.gif"] {
+        right: 45px;
+        display: block;
+        position: absolute;
+        margin-top: -34px;
+    }
+    .cbi-section-node > .cbi-value:nth-of-type(2n) {
+        background-color: var(--sectionbgColor);
     }
 
+    .cbi-tabcontainer > .cbi-value:nth-of-type(2n) {
+        background-color: var(--sectionbgColor);
+    }
+
+    div > .cbi-value:nth-of-type(2n) {
+        background-color: var(--sectionbgColor);
+    }
 
     .node-main-login > .main .cbi-value {
         padding: 0;
@@ -2486,15 +2464,18 @@ body.lang_pl.node-main-login .cbi-value-title {
 
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-transform: capitalize;
     }
 
     select,
     input {
-        max-width: 200px;
-        height: 2.2rem;
-        line-height: 2.2rem;
+        /* max-width: 200px; */
+    }
+
+    input[type='checkbox'] {
+    height: 1.2rem !important;
+    width: 1.2rem !important;
     }
 
     .mobile-hide {
@@ -2537,32 +2518,3 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
-@media screen and (min-width: 992px) {
-    .cbi-value input[type="password"],
-    .cbi-value input[type="text"] {
-        max-width: 20rem;
-    }
-    .cbi-value-field .cbi-input-select {
-        max-width: 20rem;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .cbi-value input[type="password"],
-    .cbi-value input[type="text"] {
-        max-width: 20rem;
-    }
-    .cbi-value-field .cbi-input-select {
-        max-width: 20rem;
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    .cbi-value input[type="password"],
-    .cbi-value input[type="text"] {
-        max-width: 20rem;
-    }
-    .cbi-value-field .cbi-input-select {
-        max-width: 20rem;
-    }
-}
