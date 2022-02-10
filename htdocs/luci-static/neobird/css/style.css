@@ -15,7 +15,7 @@
     --mainbg: #fff;
     --bgwhite: #fff;
     --activeColor: #51c291;
-    --activeBottom: none;
+    --activeBottom: #51c291 2px solid;
     --textColor: rgb(132,119,116);
     --borderColor: rgba(0,0,0,.15);
     --navbgColor: rgba(255, 255, 255, .7);
@@ -23,15 +23,15 @@
     --sectionbgColor: #fff;
     --sectionbgColor2: #fff;
     --sectionShaddow: 3px 3px 3px rgba(0,0,0,.05);
-    --sectionBorder: 1px solid #e4eaec;
-    --sectiontabBorder: 1px solid #e4eaec;
-    --tabmenuBorderLR: 1px solid #e4eaec;
-    --tabmenuBottom: none;
-    --tabmenuRadius: none;
+    --sectionBorder: none;
+    --sectiontabBorder: none;
+    --tabmenuBorderLR: none;
+    --tabmenubgColor: none;
+    --tabmenuBottom: #e4eaec 1px solid;
+    --tabmenuRadius: 0;
     --sectionnodeBorder: #f7f7f7 1px solid;
     --cbilineColor: #f7f7f7 1px solid;
     --tabbgColor: #fff;
-    --tabmenubgColor: #f7f7f7;
     --inputbgColor: #f8f8f8;
     --inputtextColor: #76838f;
     --inputBorder: 1px solid #e4eaec;
@@ -344,6 +344,54 @@ p#aliyundrive-webdav_status b {
 .cbi-section .cbi-section {
     margin: 10px;
 }
+
+/* fix node-services-vssr */
+
+.node-services-vssr .status-bar {
+	bottom: 50px;
+    display: none;
+}
+
+.node-services-vssr .ssr-button {
+	min-width: 30px;
+}
+.node-services-vssr #cbi-vssr .panel-title {
+    padding: 10px 0 10px 10px !important;
+    letter-spacing: 0 !important;
+}
+
+.node-services-vssr .status .block {
+	border-radius: 10px !important;
+	box-shadow: none !important;
+	background-color: var(--sectionbgColor) !important;
+}
+
+.node-services-vssr button {
+	border-radius: 10px !important;
+	}
+
+#cbi-vssr-servers .cbi-section-table-row {
+    position: relative;
+    margin: 10px !important;
+    padding: 8px 15px 8px 70px;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    border: 0;
+    color: var(--textColor) !important;
+    text-align: left;
+    line-height: 1.7em;
+    overflow: hidden;
+    letter-spacing: normal;
+	background-color: var(--inputbgColor) !important;
+}
+.cbi-section-table-row.fast {
+    background-color: #add8e6 !important;
+}
+.incon .tp {
+    text-transform: uppercase;
+    color: var(--bg) !important;
+}
+
 /** img retina **/
 
 img[src*="/luci-static/resources/icons/port_up.png"] {
@@ -560,7 +608,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     width: 17rem;
     background-color: var(--mainleftbgColor);
     overflow-x: auto;
-    height: 100%;
+    height: calc(100% - 3.5rem);
     position: fixed;
     padding-top: 15px;
 }
@@ -611,7 +659,7 @@ header > .container > .brand {
     letter-spacing:3px;
 }
 header > .container > a[class="brand"]:after {
-    content:"搴�";
+    content:"鎼达拷";
     font-size:14px;
     font-family:Tahoma;
     position: absolute;
@@ -699,6 +747,7 @@ p#shadowsocksr_status {
     font-size: 1rem;
     width: 90%;
     margin: auto;
+    margin-bottom: 90px;
 }
 
 .main > .main-left > .nav > li a {
@@ -900,7 +949,7 @@ h1 {
 
 h2 {
     color: var(--activeColor);
-    padding: 0 12px 0px 12px;
+    padding: 0 12px 6px 12px;
     text-transform: capitalize;
 }
 
@@ -908,7 +957,7 @@ h3 {
     font-size: 1.2rem;
     color: var(--activeColor);
     font-weight:bold;
-    padding: 0 12px 10px 15px;
+    padding: 0 12px 10px 12px;
 }
 
 h4 {
@@ -942,7 +991,7 @@ fieldset > legend {
 
 fieldset > fieldset {
     /* margin: 0; */
-    /* padding: 0; */
+    padding: 0;
     /* border: none; */
     /* box-shadow: none; */
 }
@@ -1297,13 +1346,13 @@ form.inline + form.inline,
 
 .cbi-tabmenu > li > a {
     text-decoration: none;
-    padding: 0 10px 0 10px;
     float: left;
     display: block;
     white-space: nowrap;
     height: 2.5rem;
     line-height: 2.5rem;
     font-size: 0.92rem;
+    margin: 0 10px;
 }
 
 .tabs > li[class~="active"],
@@ -1331,19 +1380,20 @@ form.inline + form.inline,
     width: 100%;
     overflow-x: auto;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .cbi-tabmenu > li:hover {
-    background-color: var(--sectionbgColor);
+    background-color: none;
 }
 
 .cbi-tabmenu > li[class~="cbi-tab"] {
-    background-color: var(--sectionbgColor);
-    border-bottom: var(--activeBottom);
+    background-color: none;
 }
 
 .cbi-tabmenu > li[class~="cbi-tab"] a {
     color: var(--activeColor) ;
+    border-bottom: 2px solid var(--activeColor);
 }
 
 .cbi-section-node-tabbed {
@@ -1471,9 +1521,6 @@ div > .cbi-value:nth-of-type(2n) {
     font-weight: bold;
 }
 
-#cbi-ipkgconf .cbi-section {
-    border-radius: 0 0 10px 10px;
-}
 
 /* luci */
 
@@ -1492,7 +1539,7 @@ div > .cbi-value:nth-of-type(2n) {
 .right .cbi-button {
     height: 20px;
     line-height: 20px;
-    min-width: 70px;
+    min-width: 60px;
     padding: 0;
     margin: 0;
 }
@@ -1548,10 +1595,6 @@ fieldset.cbi-section{
     margin-bottom: 20px;
     border-radius: 10px;
     margin-top: 5px;
-}
-
-form>fieldset.cbi-section{
-    border-radius: 0 0 10px 10px;
 }
 
 /*textarea*/
@@ -2006,11 +2049,10 @@ header > .container > .pull-right > * {
 }
 
 .node-system-packages > .main .cbi-value > pre {
-    background-color: #f2f2f2;
+    background-color: var(--inputbgColor);
     padding: 10px;
     overflow: auto;
-    margin: 0px 5px 5px 5px;
-    border: #eee 1px solid;
+    border: var(--inputBorder);
     border-radius: 10px;
 }
 
@@ -2032,7 +2074,7 @@ header > .container > .pull-right > * {
     border-left: var(--sectionBorder);
     border-right: var(--sectionBorder);
     background-color: var(--sectionbgColor);
-    border-radius: 0 0 10px 10px;
+    border-radius: 10px;
 }
 
 #container\.nlbw\.export ul li {
@@ -2096,19 +2138,18 @@ header > .container > .pull-right > * {
 }
 
 
-.node-status-iptables fieldset,
-.node-system-packages fieldset,
-.node-system-flashops fieldset {
-    margin-top: 0;
-}
+
+/** fix system packages 
 .node-system-packages .cbi-section {
     border-radius: 0 0 10px 10px;
 }
 
-.node-system-packages .cbi-section-node {
 
-
+#cbi-ipkgconf .cbi-section {
+    border-radius: 0 0 10px 10px;
 }
+
+**/
 
 
 .node-system-flashops fieldset fieldset {
@@ -2119,7 +2160,6 @@ header > .container > .pull-right > * {
 }
 
 .node-system-flashops .cbi-section {
-    margin-bottom: 0;
     padding: 0;
 }
 .node-system-flashops .cbi-section-descr {
@@ -2129,9 +2169,7 @@ header > .container > .pull-right > * {
     /* border: var(--sectiontabBorder);
     background-color: var(--sectionbgColor2); */
 }
-.node-system-flashops fieldset {
-    border-radius: 0 0 10px 10px;
-}
+
 
 .node-status-iptables .cbi-tabmenu,
 .node-system-packages .cbi-tabmenu,
@@ -2404,9 +2442,9 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
     
     .cbi-section-node {
-        padding: 10px;
+        padding: 10px !important;
     }
-
+	
     .cbi-value-description {
         width: 100%;
         display: block;
@@ -2523,3 +2561,30 @@ body.lang_pl.node-main-login .cbi-value-title {
     }
 }
 
+@media screen and (max-width: 700px) {
+
+    #cbi-vssr-servers .cbi-button-add {
+        position: static !important; 
+        width: auto !important; 
+        height: 2rem !important;
+        line-height: 2rem !important;
+        color: #fff; 
+        display: block; 
+        padding: 0 !important;
+        font-size: 0.92rem;
+        border-radius: 10px !important;
+        box-shadow: none ;
+        background-image: none;
+    }
+	#cbi-vssr-servers .cbi-section-table-row {
+		margin:10px 0 !important;
+	}
+    #cbi-vssr-servers .p-in5 {
+        padding-bottom: 10px !important;
+        margin: 0 !important;
+    }
+
+    #cbi-vssr-servers .cbi-page-actions {
+        padding-bottom: 10px !important;
+    }
+}
