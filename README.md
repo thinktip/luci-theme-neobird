@@ -33,13 +33,12 @@
 * luci插件众多，不规范的插件可能会存在显示问题，不做保证
 
 ## 预览
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S1.png)
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S2.png)
-![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/macOS_S3.png)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5916.JPEG)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5915.JPEG)
-![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_5909.JPEG)
-![iPadOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_0103.JPEG)
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-iw6.png)
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-iwp.png)
+![macOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/SCR-20220223-j1l.png)
+![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6478.PNG)
+![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6481.PNG)
+![iOS](https://github.com/thinktip/luci-theme-neobird/blob/main/preview/IMG_6474.PNG)
 ## 自行编译：
 
 ```
