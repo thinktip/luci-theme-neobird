@@ -206,7 +206,7 @@
 				 <%-
 				 for i, r in ipairs(childs) do
 				 local nnode = node.nodes[r]
-				 local href  = controller .. "/" .. prefix .. r ..
+				 local href  = controller .. "" .. prefix .. r ..
 				 (nnode.query and http.build_querystring(nnode.query) or "")
 				 %>
 				 <li><a data-title="<%=pcdata(striptags(nnode.title))%>" href="<%=pcdata(href)%>"><%=pcdata(striptags(translate(nnode.title)))%></a></li>
@@ -231,7 +231,7 @@
 			 %>
 			 <li class="slide">
 				 <a class="menu" data-title="<%=pcdata(striptags(nnode.title))%>" href="#"><%=pcdata(striptags(translate(nnode.title)))%></a>
-				 <%- submenu("/" .. category .. "/" .. r .. "/", nnode) %>
+				 <%- submenu("" .. category .. "/" .. r .. "/", nnode) %>
 			 </li>
 			 <%          else %>
 			 <li class="slide">
