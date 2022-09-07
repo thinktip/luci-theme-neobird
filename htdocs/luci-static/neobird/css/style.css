@@ -2049,10 +2049,10 @@ header > .container > .pull-right > * {
 }
 
 .node-system-packages > .main .cbi-value > pre {
-    background-color: var(--inputbgColor);
+    /* background-color: var(--inputbgColor); */
     padding: 10px;
     overflow: auto;
-    border: var(--inputBorder);
+    /* border: var(--inputBorder); */
     border-radius: 10px;
 }
 
