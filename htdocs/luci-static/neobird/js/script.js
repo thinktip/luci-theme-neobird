@@ -85,17 +85,21 @@
     $(".main > .main-left > .nav > .slide > .menu").click(function () {
         var ul = $(this).next(".slide-menu");
         var menu = $(this);
-        if (!ul.is(":visible")) {
-            menu.addClass("active");
-            ul.addClass("active");
-            ul.stop(true).slideDown("fast");
-        } else {
-            ul.stop(true).slideUp("fast", function () {
-                menu.removeClass("active");
-                ul.removeClass("active");
-            });
-        }
-        return false;
+        if (!menu.hasClass("exit")) {
+            $(".main > .main-left > .nav > .slide > .active").next(".slide-menu").stop(true).slideUp("fast");
+            $(".main > .main-left > .nav > .slide > .menu").removeClass("active");
+            if (!ul.is(":visible")) {
+                menu.addClass("active");
+                ul.addClass("active");
+                ul.stop(true).slideDown("fast");
+            } else {
+                ul.stop(true).slideUp("fast", function () {
+                    menu.removeClass("active");
+                    ul.removeClass("active");
+                });
+            }
+
+            return false;
     });
 
     /**
