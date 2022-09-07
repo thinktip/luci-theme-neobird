@@ -84,6 +84,7 @@
      */
     $(".main > .main-left > .nav > .slide > .menu").click(function () {
         var ul = $(this).next(".slide-menu");
+        var menu = $(this);
         if (!menu.hasClass("exit")) {
             $(".main > .main-left > .nav > .slide > .active").next(".slide-menu").stop(true).slideUp("fast");
             $(".main > .main-left > .nav > .slide > .menu").removeClass("active");
@@ -97,8 +98,9 @@
                     ul.removeClass("active");
                 });
             }
+
+            return false;
         }
-        return false;
     });
 
     /**
