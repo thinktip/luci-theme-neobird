@@ -402,6 +402,14 @@ img[src*="/luci-static/resources/icons/port_up.png"] {
     width: 0;
 }
 
+img[src*="/luci-static/resources/icons/port_down.png"] {
+    background-image: url(../images/port_down.png);
+    background-size: 32px 32px;
+    height: 32px;
+    padding: 0 0 0 32px;
+    width: 0;
+}
+
 img[src*="/luci-static/resources/icons/ethernet.png"] {
     background-image: url(../images/ethernet.png);
     background-size: 32px 32px;
