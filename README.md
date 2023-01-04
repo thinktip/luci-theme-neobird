@@ -1,4 +1,9 @@
 # luci-theme-neobird
+
+- 修复安装package提示信息背景泛白
+- 优化菜单缩放
+- 优化显示网口down状态显示图标
+  
 ## 针对移动端优化的Openwrt主题
 
 For Lean's OpenWRT Only
