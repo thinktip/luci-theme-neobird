@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build
-        uses: gngpp/gh-action-sdk@luci-theme-neobird
+        uses: openwrt/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
 
