@@ -1,5 +1,5 @@
 # luci-theme-neobird
-## 针对移动端优化的Openwrt主题
+## 针对移动端优化的 Openwrt 主题
 
 For Lean's OpenWRT Only
 https://github.com/coolsnowwolf/lede
