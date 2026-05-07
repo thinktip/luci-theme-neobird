@@ -574,7 +574,7 @@ img[src*="/luci-static/resources/cbi/reload.gif"] {
     padding: 8px 0;
     width: 20%;
     text-decoration: none;
-    max-width: 100px;
+    /*max-width: 100px;*/
 }
 
 .cbi-map {
@@ -2517,7 +2517,8 @@ body.lang_pl.node-main-login .cbi-value-title {
 
     select,
     input {
-        /* max-width: 200px; */
+        /* 
+	    : 200px; */
     }
 
     input[type='checkbox'] {
